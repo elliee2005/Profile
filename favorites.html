@@ -4,22 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Favorites | Jhanelle Estacio</title>
-
-    <!-- Styles -->
     <link rel="stylesheet" href="style.css">
-
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-
-<!-- ================= NAVBAR ================= -->
 <nav class="navbar">
     <div class="nav-container">
         <div class="nav-logo">
@@ -33,10 +25,27 @@
             <a href="favorites.html" class="nav-link active"><span class="nav-number">03</span> Favorites</a>
         </div>
 
-        <button class="menu-toggle">
+        <div class="nav-cta">
+            <span class="status-indicator"></span>
+            <span class="status-text">BSIT Student</span>
+        </div>
+
+        <button class="menu-toggle" id="menuToggle">
+            <span class="menu-bar"></span>
             <span class="menu-bar"></span>
             <span class="menu-bar"></span>
         </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="nav-menu-mobile" id="mobileMenu">
+        <a href="index.html" class="nav-link"><span class="nav-number">01</span> Home</a>
+        <a href="about.html" class="nav-link"><span class="nav-number">02</span> About</a>
+        <a href="favorites.html" class="nav-link active"><span class="nav-number">03</span> Favorites</a>
+        <div class="nav-cta" style="margin-top: 12px; align-self: flex-start;">
+            <span class="status-indicator"></span>
+            <span class="status-text">BSIT Student</span>
+        </div>
     </div>
 </nav>
 
@@ -48,7 +57,7 @@
             <h1 class="page-title">My Creative<br>Inspirations</h1>
             <p class="page-intro">
                 Beyond academics and technology, I find joy and inspiration in music, art, and creative expression.
-                Here’s what fuels my imagination and keeps me inspired.
+                Here's what fuels my imagination and keeps me inspired.
             </p>
         </div>
 
@@ -89,7 +98,7 @@
 
                 <p class="hobby-desc">
                     Strumming melodies on my guitar is my escape and creative expression.
-                    It’s where I find peace
+                    It's where I find peace
                     and channel my emotions into music.
                 </p>
 
@@ -127,7 +136,7 @@
 
                 <p class="hobby-desc">
                     Music is the soundtrack to my life. Whether studying, relaxing, or seeking inspiration,
-                    I’m always exploring new artists and genres. It helps me focus and recharge.
+                    I'm always exploring new artists and genres. It helps me focus and recharge.
                 </p>
 
                 <div class="hobby-meta">
@@ -164,7 +173,7 @@
         <div class="quote-card">
             <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
             <blockquote class="quote-text">
-                “Music and technology are both languages of creativity—one speaks to the heart, the other to the mind.”
+                "Music and technology are both languages of creativity—one speaks to the heart, the other to the mind."
             </blockquote>
             <div class="quote-author">
                 <span class="author-name">Jhanelle Estacio</span>
@@ -207,6 +216,33 @@
         <p>&copy; 2023 Jhanelle P. Estacio</p>
     </div>
 </footer>
+
+<script>
+    // Mobile menu toggle
+    document.getElementById('menuToggle').addEventListener('click', function() {
+        document.getElementById('mobileMenu').classList.toggle('open');
+    });
+
+    document.querySelectorAll('.nav-menu-mobile .nav-link').forEach(link => {
+        link.addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.remove('open');
+        });
+    });
+
+    document.addEventListener('click', function(e) {
+        const mobileMenu = document.getElementById('mobileMenu');
+        const toggle = document.getElementById('menuToggle');
+        if (!mobileMenu.contains(e.target) && !toggle.contains(e.target)) {
+            mobileMenu.classList.remove('open');
+        }
+    });
+
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+            document.getElementById('mobileMenu').classList.remove('open');
+        }
+    });
+</script>
 
 </body>
 </html>

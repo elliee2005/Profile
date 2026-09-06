@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,235 +8,198 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
-<nav class="navbar">
-    <div class="nav-container">
-        <div class="nav-logo">
-            <span class="logo-icon">JE</span>
-            <span class="logo-text">Jhanelle Estacio</span>
-        </div>
-
-        <div class="nav-menu">
-            <a href="index.html" class="nav-link"><span class="nav-number">01</span> Home</a>
-            <a href="about.html" class="nav-link"><span class="nav-number">02</span> About</a>
-            <a href="favorites.html" class="nav-link active"><span class="nav-number">03</span> Favorites</a>
-        </div>
-
-        <button class="menu-toggle" id="menuToggle">
-            <span class="menu-bar"></span>
-            <span class="menu-bar"></span>
-            <span class="menu-bar"></span>
-        </button>
-    </div>
-
-    <!-- Mobile Menu -->
-    <div class="nav-menu-mobile" id="mobileMenu">
-        <a href="index.html" class="nav-link"><span class="nav-number">01</span> Home</a>
-        <a href="about.html" class="nav-link"><span class="nav-number">02</span> About</a>
-        <a href="favorites.html" class="nav-link active"><span class="nav-number">03</span> Favorites</a>
-    </div>
-</nav>
-
-<!-- ================= HEADER ================= -->
-<section class="page-header favorites-header">
-    <div class="header-container">
-        <div class="header-content">
-            <span class="page-label">Personal Tastes</span>
-            <h1 class="page-title">My Creative<br>Inspirations</h1>
-            <p class="page-intro">
-                Beyond academics and technology, I find joy and inspiration in music, art, and creative expression.
-                Here's what fuels my imagination and keeps me inspired.
-            </p>
-        </div>
-
-        <div class="header-visual">
-            <div class="visual-grid">
-                <div class="grid-item"><i class="fas fa-guitar"></i></div>
-                <div class="grid-item"><i class="fas fa-headphones"></i></div>
-                <div class="grid-item"><i class="fas fa-music"></i></div>
-                <div class="grid-item"><i class="fas fa-star"></i></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ================= HOBBIES ================= -->
-<section class="hobbies-section">
-    <div class="section-header">
-        <span class="section-label">Creative Outlets</span>
-        <h2 class="section-title">Hobbies & Passions</h2>
-    </div>
-
-    <div class="hobbies-container">
-
-        <!-- Guitar -->
-        <div class="hobby-card">
-            <div class="hobby-visual">
-                <div class="hobby-image-container">
-                    <img src="images/guitar.jpg" alt="Playing Guitar" class="hobby-image">
-                    <div class="hobby-badge">Creative</div>
-                </div>
-            </div>
-
-            <div class="hobby-content">
-                <div class="hobby-header">
-                    <div class="hobby-icon"><i class="fas fa-guitar"></i></div>
-                    <h3 class="hobby-title">Playing Guitar</h3>
-                </div>
-
-                <p class="hobby-desc">
-                    Strumming melodies on my guitar is my escape and creative expression.
-                    It's where I find peace
-                    and channel my emotions into music.
-                </p>
-
-                <div class="hobby-meta">
-                    <div>
-                        <span class="meta-label">Skill Level</span>
-                        <span class="meta-value">Beginner</span>
-                    </div>
-                    <div>
-                        <span class="meta-label">Years</span>
-                        <span class="meta-value">1+</span>
-                    </div>
-                    <div>
-                        <span class="meta-label">Genre</span>
-                        <span class="meta-value">OPM, Acoustic</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Music -->
-        <div class="hobby-card">
-            <div class="hobby-visual">
-                <div class="hobby-image-container">
-                    <img src="images/music.jpg" alt="Listening to Music" class="hobby-image">
-                    <div class="hobby-badge">Inspiration</div>
-                </div>
-            </div>
-
-            <div class="hobby-content">
-                <div class="hobby-header">
-                    <div class="hobby-icon"><i class="fas fa-headphones"></i></div>
-                    <h3 class="hobby-title">Listening to Music</h3>
-                </div>
-
-                <p class="hobby-desc">
-                    Music is the soundtrack to my life. Whether studying, relaxing, or seeking inspiration,
-                    I'm always exploring new artists and genres. It helps me focus and recharge.
-                </p>
-
-                <div class="hobby-meta">
-                    <div>
-                        <span class="meta-label">Daily</span>
-                        <span class="meta-value">4–5 hrs</span>
-                    </div>
-                    <div>
-                        <span class="meta-label">Platforms</span>
-                        <span class="meta-value">Spotify, YouTube</span>
-                    </div>
-                    <div>
-                        <span class="meta-label">Mood</span>
-                        <span class="meta-value">Varied</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<!-- ================= INSPIRATION ================= -->
-<section class="inspiration-section">
-    <div class="inspiration-container">
-        <div>
-            <h2 class="inspiration-title">Creativity Fuels Innovation</h2>
-            <p class="inspiration-text">
-                My love for music and creative expression directly influences my approach to technology.
-                Just as a song has structure, rhythm, and emotion, good technology should feel human-centered.
-            </p>
-        </div>
-
-        <div class="quote-card">
-            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-            <blockquote class="quote-text">
-                "Music and technology are both languages of creativity—one speaks to the heart, the other to the mind."
-            </blockquote>
-            <div class="quote-author">
-                <span class="author-name">Jhanelle Estacio</span>
-                <span class="author-title">BSIT Student & Creative</span>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ================= FOOTER ================= -->
-<footer class="footer">
-    <div class="footer-container">
-        <div class="footer-brand">
-            <div class="footer-logo">
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
                 <span class="logo-icon">JE</span>
                 <span class="logo-text">Jhanelle Estacio</span>
             </div>
-            <p class="footer-tagline">
-                Building a future in technology with creativity and empathy.
-            </p>
-        </div>
 
-        <div class="footer-links">
-            <div class="link-group">
-                <h4 class="link-title">Navigate</h4>
-                <a href="index.html" class="footer-link">Home</a>
-                <a href="about.html" class="footer-link">About</a>
-                <a href="favorites.html" class="footer-link">Favorites</a>
-            </div>
-
-            <div class="link-group">
-                <h4 class="link-title">Connect</h4>
-                <a href="https://facebook.com" class="footer-link">Facebook</a>
-                <a href="https://instagram.com" class="footer-link">Instagram</a>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link"><span class="nav-number">01</span> Home</a>
+                <a href="about.html" class="nav-link"><span class="nav-number">02</span> About</a>
+                <a href="favorites.html" class="nav-link active"><span class="nav-number">03</span> Favorites</a>
             </div>
         </div>
-    </div>
+    </nav>
 
-    <div class="footer-bottom">
-        <p>&copy; 2025 Jhanelle P. Estacio</p>
-    </div>
-</footer>
+    <!-- ================= HEADER ================= -->
+    <section class="page-header favorites-header">
+        <div class="header-container">
+            <div class="header-content">
+                <span class="page-label">Personal Tastes</span>
+                <h1 class="page-title">My Creative<br>Inspirations</h1>
+                <p class="page-intro">
+                    Beyond academics and technology, I find joy and inspiration in music, art, and creative expression.
+                    Here's what fuels my imagination and keeps me inspired.
+                </p>
+            </div>
 
-<script>
-    // Mobile menu toggle
-    document.getElementById('menuToggle').addEventListener('click', function() {
-        document.getElementById('mobileMenu').classList.toggle('open');
-    });
+            <div class="header-visual">
+                <div class="visual-grid">
+                    <div class="grid-item"><i class="fas fa-guitar"></i></div>
+                    <div class="grid-item"><i class="fas fa-headphones"></i></div>
+                    <div class="grid-item"><i class="fas fa-music"></i></div>
+                    <div class="grid-item"><i class="fas fa-star"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    document.querySelectorAll('.nav-menu-mobile .nav-link').forEach(link => {
-        link.addEventListener('click', function() {
-            document.getElementById('mobileMenu').classList.remove('open');
-        });
-    });
+    <!-- ================= HOBBIES ================= -->
+    <section class="hobbies-section">
+        <div class="section-header">
+            <span class="section-label">Creative Outlets</span>
+            <h2 class="section-title">Hobbies & Passions</h2>
+        </div>
 
-    document.addEventListener('click', function(e) {
-        const mobileMenu = document.getElementById('mobileMenu');
-        const toggle = document.getElementById('menuToggle');
-        if (!mobileMenu.contains(e.target) && !toggle.contains(e.target)) {
-            mobileMenu.classList.remove('open');
-        }
-    });
+        <div class="hobbies-container">
 
-    window.addEventListener('resize', function() {
-        if (window.innerWidth > 768) {
-            document.getElementById('mobileMenu').classList.remove('open');
-        }
-    });
-</script>
+            <!-- Guitar -->
+            <div class="hobby-card">
+                <div class="hobby-visual">
+                    <div class="hobby-image-container">
+                        <img src="images/guitar.jpg" alt="Playing Guitar" class="hobby-image">
+                        <div class="hobby-badge">Creative</div>
+                    </div>
+                </div>
 
+                <div class="hobby-content">
+                    <div class="hobby-header">
+                        <div class="hobby-icon"><i class="fas fa-guitar"></i></div>
+                        <h3 class="hobby-title">Playing Guitar</h3>
+                    </div>
+
+                    <p class="hobby-desc">
+                        Strumming melodies on my guitar is my escape and creative expression.
+                        It's where I find peace
+                        and channel my emotions into music.
+                    </p>
+
+                    <div class="hobby-meta">
+                        <div>
+                            <span class="meta-label">Skill Level</span>
+                            <span class="meta-value">Beginner</span>
+                        </div>
+                        <div>
+                            <span class="meta-label">Years</span>
+                            <span class="meta-value">1+</span>
+                        </div>
+                        <div>
+                            <span class="meta-label">Genre</span>
+                            <span class="meta-value">OPM, Acoustic</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Music -->
+            <div class="hobby-card">
+                <div class="hobby-visual">
+                    <div class="hobby-image-container">
+                        <img src="images/music.jpg" alt="Listening to Music" class="hobby-image">
+                        <div class="hobby-badge">Inspiration</div>
+                    </div>
+                </div>
+
+                <div class="hobby-content">
+                    <div class="hobby-header">
+                        <div class="hobby-icon"><i class="fas fa-headphones"></i></div>
+                        <h3 class="hobby-title">Listening to Music</h3>
+                    </div>
+
+                    <p class="hobby-desc">
+                        Music is the soundtrack to my life. Whether studying, relaxing, or seeking inspiration,
+                        I'm always exploring new artists and genres. It helps me focus and recharge.
+                    </p>
+
+                    <div class="hobby-meta">
+                        <div>
+                            <span class="meta-label">Daily</span>
+                            <span class="meta-value">4–5 hrs</span>
+                        </div>
+                        <div>
+                            <span class="meta-label">Platforms</span>
+                            <span class="meta-value">Spotify, YouTube</span>
+                        </div>
+                        <div>
+                            <span class="meta-label">Mood</span>
+                            <span class="meta-value">Varied</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= INSPIRATION ================= -->
+    <section class="inspiration-section">
+        <div class="inspiration-container">
+            <div>
+                <h2 class="inspiration-title">Creativity Fuels Innovation</h2>
+                <p class="inspiration-text">
+                    My love for music and creative expression directly influences my approach to technology.
+                    Just as a song has structure, rhythm, and emotion, good technology should feel human-centered.
+                </p>
+            </div>
+
+            <div class="quote-card">
+                <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                <blockquote class="quote-text">
+                    "Music and technology are both languages of creativity—one speaks to the heart, the other to the
+                    mind."
+                </blockquote>
+                <div class="quote-author">
+                    <span class="author-name">Jhanelle Estacio</span>
+                    <span class="author-title">BSIT Student & Creative</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <span class="logo-icon">JE</span>
+                    <span class="logo-text">Jhanelle Estacio</span>
+                </div>
+                <p class="footer-tagline">
+                    Building a future in technology with creativity and empathy.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <div class="link-group">
+                    <h4 class="link-title">Navigate</h4>
+                    <a href="index.html" class="footer-link">Home</a>
+                    <a href="about.html" class="footer-link">About</a>
+                    <a href="favorites.html" class="footer-link">Favorites</a>
+                </div>
+
+                <div class="link-group">
+                    <h4 class="link-title">Connect</h4>
+                    <a href="https://facebook.com" class="footer-link">Facebook</a>
+                    <a href="https://instagram.com" class="footer-link">Instagram</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Jhanelle P. Estacio</p>
+        </div>
+    </footer>
 </body>
+
 </html>

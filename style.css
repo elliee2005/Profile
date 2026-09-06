@@ -166,16 +166,6 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
 }
 
-.nav-cta {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 8px 16px;
-    background: var(--surface-light);
-    border-radius: 20px;
-    border: 1px solid var(--border);
-}
-
 .status-indicator {
     width: 8px;
     height: 8px;
@@ -228,11 +218,6 @@ h1, h2, h3, h4, h5, h6 {
 .nav-menu-mobile .nav-link {
     padding: 10px 0;
     border-bottom: 1px solid rgba(255,255,255,0.03);
-}
-
-.nav-menu-mobile .nav-cta {
-    align-self: flex-start;
-    margin-top: 4px;
 }
 
 .nav-menu-mobile.open {
@@ -1291,12 +1276,7 @@ section, .hero-section, .quick-facts, .about-content,
     }
 }
 
-@media (max-width: 768px) {
-    .nav-menu,
-    .nav-cta {
-        display: none;
-    }
-    
+@media (max-width: 768px) { 
     .menu-toggle {
         display: flex;
     }

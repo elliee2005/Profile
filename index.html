@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
@@ -39,10 +35,36 @@
                 </a>
             </div>
 
-            <button class="menu-toggle">
+            <div class="nav-cta">
+                <span class="status-indicator"></span>
+                <span class="status-text">BSIT Student</span>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle">
+                <span class="menu-bar"></span>
                 <span class="menu-bar"></span>
                 <span class="menu-bar"></span>
             </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="nav-menu-mobile" id="mobileMenu">
+            <a href="index.html" class="nav-link active">
+                <span class="nav-number">01</span>
+                <span class="nav-label">Home</span>
+            </a>
+            <a href="about.html" class="nav-link">
+                <span class="nav-number">02</span>
+                <span class="nav-label">About</span>
+            </a>
+            <a href="favorites.html" class="nav-link">
+                <span class="nav-number">03</span>
+                <span class="nav-label">Favorites</span>
+            </a>
+            <div class="nav-cta" style="margin-top: 12px; align-self: flex-start;">
+                <span class="status-indicator"></span>
+                <span class="status-text">BSIT Student</span>
+            </div>
         </div>
     </nav>
 
@@ -91,18 +113,12 @@
             <div class="hero-visual">
                 <div class="visual-container">
                     <div class="main-visual">
-                        <!-- Profile Image Container -->
                         <div class="profile-image-container">
-                            <!-- Your actual profile image -->
                             <img src="images/profile.jpg" alt="Jhanelle Estacio" class="profile-image">
-
-                            <!-- Fallback in case image doesn't load -->
                             <div class="profile-fallback">
                                 <i class="fas fa-user-circle"></i>
                                 <span>Jhanelle</span>
                             </div>
-
-                            <!-- Decorative elements -->
                             <div class="profile-decoration">
                                 <div class="decoration-circle circle-1"></div>
                                 <div class="decoration-circle circle-2"></div>
@@ -110,8 +126,6 @@
                                 <div class="decoration-dot dot-2"></div>
                                 <div class="decoration-accent accent-1"></div>
                             </div>
-
-                            <!-- Status badge -->
                             <div class="profile-status">
                                 <span class="status-dot"></span>
                                 <span class="status-text">BSIT Student</span>
@@ -120,6 +134,7 @@
                     </div>
                 </div>
             </div>
+        </div>
     </section>
 
     <!-- Quick Facts -->
@@ -211,6 +226,35 @@
             </div>
         </div>
     </footer>
-</body>
 
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.toggle('open');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('.nav-menu-mobile .nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mobileMenu').classList.remove('open');
+            });
+        });
+
+        // Close mobile menu on outside click
+        document.addEventListener('click', function(e) {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const toggle = document.getElementById('menuToggle');
+            if (!mobileMenu.contains(e.target) && !toggle.contains(e.target)) {
+                mobileMenu.classList.remove('open');
+            }
+        });
+
+        // Close mobile menu on resize to desktop
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                document.getElementById('mobileMenu').classList.remove('open');
+            }
+        });
+    </script>
+</body>
 </html>
